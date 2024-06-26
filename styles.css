@@ -1,0 +1,206 @@
+html {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: white;
+  padding: 10px 20px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #d5d5d5;
+  border-radius: 10px;
+}
+
+section {
+  float: none;
+  padding: 20px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.project,
+.skill {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea,
+button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #870000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #510000;
+}
+
+.dark-mode {
+  background: #101010;
+}
+
+.dark-mode #projects,
+.dark-mode #about,
+.dark-mode #skills,
+.dark-mode #contact,
+.dark-mode #certificates {
+  background: #1b1b1b;
+  color: #f2f2f2;
+}
+
+.dark-mode #message,
+.dark-mode #email,
+.dark-mode #name,
+.dark-mode #subject {
+  background: #282828;
+  color: #f2f2f2;
+  border: none;
+}
+
+.dark-mode #navbar {
+  background: #1b1b1b;
+  color: #f2f2f2;
+  border: none;
+}
+
+.dark-mode nav ul li a {
+  color: #f2f2f2;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+}
+
+strong {
+  font-size: larger;
+}
+
+img {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode nav ul li a:hover {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+#about {
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#selfie {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+#Info {
+  flex: 1;
+}
+
+.project img {
+  cursor: pointer;
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.project img:hover {
+  transform: scale(1.0125);
+}
