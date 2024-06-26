@@ -11,7 +11,6 @@ body {
 nav {
   background-color: white;
   padding: 10px 20px;
-  width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,10 +23,11 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 5px;
 }
 
 nav ul li a {
@@ -46,7 +46,7 @@ section {
   float: none;
   padding: 20px;
   margin: 10px auto;
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   background-color: white;
   border-radius: 8px;
@@ -160,7 +160,7 @@ img {
 
 .about-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
@@ -169,11 +169,13 @@ img {
   width: 150px;
   height: auto;
   border-radius: 10px;
-  margin-right: 20px;
+  margin: 0 auto 20px;
+  display: block;
 }
 
 #Info {
   flex: 1;
+  text-align: center;
 }
 
 .project img {
@@ -196,11 +198,39 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 750px;
+  width: 90%;
+  max-width: 750px;
   object-fit: cover;
   cursor: pointer;
 }
 
 .project img:hover {
   transform: scale(1.0125);
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 601px) {
+  .about-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #selfie {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  #Info {
+    text-align: left;
+  }
 }
