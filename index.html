@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
@@ -16,9 +16,16 @@
     </script>
 </head>
 
+
+
 <body>
-    <nav id="navbar">
+    <nav class="sidebar">
         <ul>
+            <li onclick=closesidebar()><a href="#"> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a> </a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -26,6 +33,20 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <nav id="navbar">
+        <ul>
+            <li class="hideOnMobile"><a href="#about">About Me</a></li>
+            <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+            <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+            <li class="hideOnMobile"><a href="#certificates">Certificates</a></li>
+            <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+            <li class="menu-button" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
     <button class="theme-toggle">Theme</button>
 
     <section id="about">
@@ -44,9 +65,10 @@
         <h1>Projects</h1>
         <br>
         <div class="project">
-            <h2>Project 1: Weather Dashboard <a href="https://lydeancollins.github.io/WeatherDashboard/">try</a>
+            <h2>Project 1; Weather Dashboard: <a href="https://lydeancollins.github.io/WeatherDashboard/">Click me to
+                    try the Website.</a>
             </h2>
-            <strong>Dark Version</strong>
+            <p>Dark Version</p>
             <img id='firstimg' src="./Images/Test.png" alt="">
             <img src="./Images/DarkWeather.png" alt="">
             <strong>What is the purpose of this website?</strong>
