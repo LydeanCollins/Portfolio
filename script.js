@@ -70,3 +70,13 @@ document.querySelectorAll(".project img").forEach((image) => {
 document.querySelector(".popup-image").onclick = () => {
   document.querySelector(".popup-image").style.display = "none";
 };
+
+function showsidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "flex";
+}
+
+function closesidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.style.display = "none";
+}
