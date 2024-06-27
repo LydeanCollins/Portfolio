@@ -179,19 +179,29 @@ img {
   text-align: center;
 }
 
-.project img {
-  cursor: pointer;
+img:hover {
+  transform: scale(1.0125);
 }
-
 .popup-image {
   position: fixed;
   top: 0;
   left: 0;
-  backdrop-filter: blur(50px);
+  background-color: #1b1b1b;
   height: 100%;
   width: 100%;
   z-index: 100;
   display: none;
+  cursor: default;
+}
+
+span {
+  position: absolute;
+  top: 0%;
+  right: 20px;
+  font-size: 70px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
 }
 
 .popup-image img {
@@ -205,9 +215,6 @@ img {
   cursor: pointer;
 }
 
-.project img:hover {
-  transform: scale(1.0125);
-}
 .menu-button {
   display: none;
 }
