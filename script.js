@@ -12,12 +12,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function sendMail() {
-  name = document.getElementById("name").value;
-  email = document.getElementById("email").value;
-  subject = document.getElementById("subject").value;
-  message = document.getElementById("message").value;
+let isSending = false;
 
+function sendMail(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Prevent multiple sends
+  if (isSending) return;
+  isSending = true;
+
+  // Get the values from the form fields
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+
+  // Check if any of the fields are empty
+  if (!name || !email || !subject || !message) {
+    alert("Please fill in all fields before sending.");
+    isSending = false;
+    return; // Exit the function if any field is empty
+  }
+
+  // Send the email using EmailJS if all fields are filled
   emailjs
     .send("service_1sligwk", "template_a7sidy5", {
       name: name,
@@ -27,16 +44,21 @@ function sendMail() {
     })
     .then(
       function (response) {
-        console.log("SUCCESS!", response.status, response.text);
+        alert("SUCCESS!", response.status, response.text);
         document.getElementById("contact-form").reset();
+        isSending = false;
       },
       function (error) {
         console.log("FAILED...", error);
         document.getElementById("contact-form").reset();
         alert("Failed to send the message. Please try again.");
+        isSending = false;
       }
     );
 }
+
+// Attach the sendMail function to the form submission event
+document.getElementById("contact-form").addEventListener("submit", sendMail);
 
 // Theme toggle button
 const themeToggleBtn = document.querySelector(".theme-toggle");
