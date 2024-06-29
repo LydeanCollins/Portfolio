@@ -23,7 +23,7 @@
                         viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg></a> </a></li>
+                    </svg></a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -45,7 +45,7 @@
         </ul>
     </nav>
 
-    <button class="theme-toggle">Theme</button>
+    <button class="theme-toggle" id="ThemeBtn">Theme</button>
 
     <section id="about">
         <h1>About Me</h1>
@@ -64,15 +64,17 @@
             <h2>Project 1; Weather Dashboard: <a href="https://lydeancollins.github.io/WeatherDashboard/">Click me to
                     try the Website.</a></h2>
             <p>Dark Version</p>
-            <img id='firstimg' src="./Images/Test.png" alt="">
-            <img src="./Images/DarkWeather.png" alt="">
+            <img src="" data-light-src="./Images/WhiteWeather.png" data-dark-src="./Images/Test.png" alt="">
+            <img src="" data-light-src="./Images/TestWhite.png" data-dark-src="./Images/DarkWeather.png" alt="">
+            <br>
+            <br>
             <strong>What is the purpose of this website?</strong>
             <p>This website allows the user to enter the name of a city and it will display the cities Temperature,
                 Weather State, Humidity, and Wind Speed. The website allows you to view the location on a map. The
                 website also features a theme change button that changes the website from white to black depending on
                 the users style. </p>
             <div class="popup-image">
-                <img src=" " alt="">
+                <img src="" alt="">
                 <span>&times;</span>
             </div>
         </div>
