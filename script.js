@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent the default form submission
-      sendMail();
+      sendMail(event);
     });
+
+  // Set initial theme and update images accordingly
+  const theme = localStorage.getItem("theme");
+  if (theme) {
+    document.body.classList.add(theme);
+    updateImageSources(theme);
+  }
 });
 
 let isSending = false;
@@ -57,28 +64,24 @@ function sendMail(event) {
     );
 }
 
-// Attach the sendMail function to the form submission event
-document.getElementById("contact-form").addEventListener("submit", sendMail);
-
 // Theme toggle button
 const themeToggleBtn = document.querySelector(".theme-toggle");
-const theme = localStorage.getItem("theme");
-theme && document.body.classList.add(theme);
 themeToggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark-mode");
-  } else {
-    localStorage.removeItem("theme");
-  }
+  const newTheme = document.body.classList.contains("dark-mode")
+    ? "dark-mode"
+    : "light-mode";
+  localStorage.setItem("theme", newTheme);
+  updateImageSources(newTheme);
 });
 
-function showCustomAlert() {
-  // Create a custom alert box with SweetAlert
-  Swal.fire({
-    title: "This is a Custom Alert title",
-    text: "Welcome to geeksForGeeks",
-    confirmButtonText: "OK",
+function updateImageSources(theme) {
+  document.querySelectorAll("img[data-light-src]").forEach((img) => {
+    const newSrc =
+      theme === "dark-mode"
+        ? img.getAttribute("data-dark-src")
+        : img.getAttribute("data-light-src");
+    img.setAttribute("src", newSrc);
   });
 }
 
