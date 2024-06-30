@@ -136,6 +136,7 @@ button:hover {
 textarea {
   resize: none;
   height: 100px;
+  text-align: justify;
 }
 
 .theme-toggle {
