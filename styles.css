@@ -9,6 +9,10 @@ body {
   text-align: justify;
 }
 
+p {
+  text-align: justify;
+}
+
 nav {
   background-color: white;
   padding: 10px 10px;
@@ -26,7 +30,7 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative; /* Added */
+  position: relative;
 }
 
 nav ul li {
@@ -61,27 +65,8 @@ h1 {
   margin-top: 0;
 }
 
-.project,
-.skill {
+.project {
   margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin: 10px 0 5px;
-}
-
-form input,
-form textarea,
-button {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 button {
@@ -93,6 +78,7 @@ button {
 
 button:hover {
   background-color: #510000;
+  transform: scale(1.03);
 }
 
 .dark-mode {
@@ -106,15 +92,6 @@ button:hover {
 .dark-mode #certificates {
   background: #1b1b1b;
   color: #f2f2f2;
-}
-
-.dark-mode #message,
-.dark-mode #email,
-.dark-mode #name,
-.dark-mode #subject {
-  background: #282828;
-  color: #f2f2f2;
-  border: none;
 }
 
 .dark-mode #navbar,
@@ -183,11 +160,8 @@ img {
   text-align: center;
 }
 
-img:hover {
-  transform: scale(1.0125);
-}
-
-.project img:hover {
+.project img:not(.popup-image img):hover {
+  transform: scale(1.01);
   cursor: pointer;
 }
 
@@ -203,7 +177,7 @@ img:hover {
   cursor: default;
 }
 
-span {
+.popup-image span {
   position: absolute;
   top: 0%;
   right: 20px;
@@ -230,7 +204,6 @@ span {
   top: 50%;
 }
 
-/* Media query for mobile screens */
 @media (max-width: 750px) {
   .hideOnMobile {
     display: none;
@@ -263,12 +236,6 @@ span {
 
   #Info {
     text-align: left;
-  }
-}
-
-@media (min-width: 600px) {
-  .sidebar {
-    width: 100%;
   }
 }
 
