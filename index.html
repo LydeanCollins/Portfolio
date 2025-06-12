@@ -7,13 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("jBFrbfBeKEGv0vZSs");
-        })();
-    </script>
 </head>
 
 <body>
@@ -50,24 +43,25 @@
     <section id="about">
         <h1>About Me</h1>
         <div class="about-content">
-            <p id="Info" style="text-align: justify">Hello! I am Lydean Lee Collins, Welcome to my personal portfolio! I am a student studying to
-                become a full time programmer. You can check out my work inside of the Projects section and also check
-                all my Skills and Certificates, if you want to get in contact with me go to the contact section and send
-                me a message.</p>
+            <img id="selfie" src="./Images/myImg.jpg">
+            <p id="Info" style="text-align: justify">Hello! I am Lydean Lee Collins, Welcome to my personal portfolio! I
+                am a student studying to become a full time programmer. You can check out my work inside of the Projects
+                section and also check all my Skills and Certificates, if you want to get in contact with me go to the
+                contact section and send me a message.</p>
         </div>
     </section>
+
     <section id="projects">
         <h1>Projects</h1>
-        <br>
         <div class="project">
-            <h2>Project 1; Weather Dashboard: <a href="https://lydeancollins.github.io/WeatherDashboard/">Click me to
-                    try the Website.</a></h2>
-            <img src="" data-light-src="./Images/WhiteWeather.png" data-dark-src="./Images/Test.png" alt="">
-            <img src="" data-light-src="./Images/TestWhite.png" data-dark-src="./Images/DarkWeather.png" alt="">
-            <br>
-            <br>
+            <h2>Project 1: Weather Dashboard <a href="https://lydeancollins.github.io/WeatherDashboard/">Click Me</a>
+            </h2>
+            <img src="./Images/WhiteWeather.png">
+            <img src="./Images/TestWhite.png">
+
             <strong>What is the purpose of this website?</strong>
-            <p style="text-align: justify">This website allows the user to enter the name of a city and it will display the cities Temperature,
+            <p style="text-align: justify">This website allows the user to enter the name of a city and it will display
+                the cities Temperature,
                 Weather State, Humidity, and Wind Speed. The website allows you to view the location on a map. The
                 website also features a theme change button that changes the website from white to black depending on
                 the users style. </p>
@@ -75,55 +69,98 @@
                 <img src="" alt="">
                 <span>&times;</span>
             </div>
+            <h2>Project 2: Steam Chatbot </h2>
+            <img src="./Images/SteamBot.png">
+            <strong>What is the purpose of this website?</strong>
+            <p style="text-align: justify">This website allows frequent steam users to quickly find information about a
+                specific game. The information the user can find is description, price, genre, developer, release, name,
+                tfidf_description, review, sentiment anlysis, and top terms. Using a steam API I am able to extract the
+                information using python and host the website with flask </p>
+            <div class="popup-image">
+                <img src="" alt="">
+                <span>&times;</span>
+            </div>
+            <h2>Project 3: YouTube Video/Audio Downloader</h2>
+            <img src="./Images/DownloadVideos.png">
+            <strong>What is the purpose of this application?</strong>
+            <p style="text-align: justify">This application is used to freely and securely download videos or music from
+                youtube without any worries of getting viruses from sketchy websites as it downloads the videos
+                locally. Using a Pythom import called yt-dsl, I am able to download videos after inputting the YouTube
+                URL within seconds the video gets saved inside of a downloads folder.</p>
+            <div class="popup-image">
+                <img src="" alt="">
+                <span>&times;</span>
+            </div>
+            <h2>Project 4: OS Dashboard <a href="https://lydeanphpassignment.infinityfreeapp.com/">Click Me</a>
+            </h2>
+            <img src="./Images/phpWebsite.png">
+            <img src="./Images/phpWebsite2.png">
+            <strong>What is the purpose of this website?</strong>
+            <p style="text-align: justify">The purpose of this website is to help the users understand the differences
+                between the major operating systems. This website uses php to save user login on a server and allow them
+                to login into their account, the information the server holds are name, surname, email, password, mobile
+                number and profile picture. There is also a server for the operating systems to store the information
+                and also add, delete and view operating systems </p>
+            <div class="popup-image">
+                <img src="" alt="">
+                <span>&times;</span>
+            </div>
         </div>
     </section>
+
     <section id="skills">
         <h1>Skills</h1>
-        <strong>Front-end Languages</strong>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>javascript</li>
-            <li>jQuery</li>
-        </ul>
-        <strong>Back-end Languages</strong>
-        <ul>
-            <li>Python</li>
-            <li>Lua</li>
-            <li>SQL</li>
-        </ul>
-        <strong>Other Skills</strong>
-        <ul>
-            <li>Designing and creating Posters</li>
-            <li>Designing and creating Wireframes</li>
-            <li>Knowledge about Linux and Windows terminal commands</li>
-            <li>Knowledge about Linux</li>
-            <li>Experience with Ubuntu</li>
-        </ul>
+        <div class="mySkills">
+            <strong>Front-End Languages</strong>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+            </ul>
+            <strong>Back-End Languages</strong>
+            <ul>
+                <li>Python</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>PHP</li>
+                <li>SQL</li>
+            </ul>
+            <strong>Other Skills</strong>
+            <ul>
+                <li>Designing Posters</li>
+                <li>Designing Wireframes</li>
+                <li>Website Creation</li>
+                <li>Database Creation</li>
+                <li>Knowledge on Linux</li>
+            </ul>
+        </div>
     </section>
+
     <section id="certificates">
         <h1>Certificates</h1>
         <ul>
             <li>English O level</li>
-            <li>Information technology O level</li>
-            <li>MCAST Introduction Certificate in ICT</li>
-            <li>MCAST Diploma Certificate in ICT</li>
-            <li>Vocational Education & Training Award for A+ PC Technician at MQF/EQF Level 3</li>
+            <li>Information Technology O level</li>
+            <li>MCAST Foundation Certificate in ICT (MQF Level 2)</li>
+            <li>MCAST Diploma in ICT MQF (Level 3)</li>
+            <li>Vocational Education & Training Award for A+ PC Technician (MQF/EQF Level 3)</li>
+            <li>MCAST Advanced Diploma in IT Software Development (MQF Level 4)</li>
         </ul>
     </section>
+
     <section id="contact">
         <h1>Contact</h1>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" onclick="sendMail()">Send</button>
-        </form>
+        <strong>Contact me using the following</strong>
+        <ul>
+            <li>Mobile Number: +356-7934-2454</li>
+            <li>Email: lydeanleecollins@outlook.com</li>
+            <li>LinkedIn: Lydean Lee Collins</li>
+            <li>WhatsApp: +356-7934-2454</li>
+        </ul>
     </section>
     <script src="script.js"></script>
 </body>
